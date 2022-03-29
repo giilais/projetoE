@@ -21,7 +21,7 @@ class LoginPage extends StatelessWidget {
                 
                 //Formulario
                 Form(
-                    child: Column(
+                  child: Column(
                   children: <Widget>[
                     TextFormField(
                       decoration: InputDecoration(
@@ -30,6 +30,13 @@ class LoginPage extends StatelessWidget {
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(50),
                               gapPadding: 0)),
+                      validator: (String value) {
+                      if (value.isEmpty) {
+                        return 'Login obrigatório';
+                      }
+
+                      return null;
+                    },
                     ),
                     SizedBox(
                       height: 20,
@@ -41,6 +48,12 @@ class LoginPage extends StatelessWidget {
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(50),
                               gapPadding: 0)),
+                      validator: (String value) {
+                        if (value.isEmpty) {
+                          return 'Senha obrigatória';
+                        }
+                        return null;
+                      },
                     ),
 
                     SizedBox(
@@ -105,7 +118,7 @@ class LoginPage extends StatelessWidget {
                     ),
                     
                     Divider(),
-                    FlatButton(onPressed: () => {}, child: Text('Cadastre-se'))
+                      FlatButton(onPressed: () => {}, child: Text('Cadastre-se'))
                   ],
                 ))
               ],
@@ -114,70 +127,3 @@ class LoginPage extends StatelessWidget {
     );
   }
 }
-
-// void _buildForm(Form) {
-//   return Form(
-//       child: Column(
-//     children: <Widget>[
-//       TextFormField(
-//         decoration: InputDecoration(
-//             labelText: 'Email',
-//             labelStyle: TextStyle(fontSize: 15),
-//             border: OutlineInputBorder(
-//                 borderRadius: BorderRadius.circular(50), gapPadding: 0)),
-//       ),
-//       SizedBox(
-//         height: 20,
-//       ),
-//       TextFormField(
-//         decoration: InputDecoration(
-//             labelText: 'Senha',
-//             labelStyle: TextStyle(fontSize: 15),
-//             border: OutlineInputBorder(
-//                 borderRadius: BorderRadius.circular(50), gapPadding: 0)),
-//       ),
-//       Container(
-//           width: double.infinity,
-//           padding: EdgeInsets.all(10),
-//           height: 60,
-//           child: RaisedButton(
-//             onPressed: () {},
-//             shape: RoundedRectangleBorder(
-//                 borderRadius: BorderRadius.circular(20)),
-//             color: ThemeUtils.primaryColor,
-//             child: Text('Entrar',
-//                 style: TextStyle(fontSize: 20, color: Colors.black)),
-//           )),
-//       Padding(
-//         padding: const EdgeInsets.symmetric(horizontal: 20.0),
-//         child: Row(
-//           children: <Widget>[
-//             Expanded(
-//                 child: Divider(
-//               color: ThemeUtils.primaryColorDark,
-//               thickness: 1,
-//             )),
-//             Padding(
-//                 padding: const EdgeInsets.all(8.0),
-//                 child: Text('ou',
-//                     style: TextStyle(
-//                         fontWeight: FontWeight.bold,
-//                         fontSize: 20,
-//                         color: ThemeUtils.primaryColorDark))),
-//             Expanded(
-//               child: Divider(
-//                 color: ThemeUtils.primaryColorDark,
-//                 thickness: 1,
-//               ),
-//             ),
-//           ],
-//         ),
-//       ),
-//       FacebookButton(
-//         onTap: () => (null),
-//       ),
-//       Divider(),
-//       FlatButton(onPressed: () => {}, child: Text('Cadastre-se'))
-//     ],
-//   ));
-// }
