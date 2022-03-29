@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 //import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:petcare/app/modules/login/buttons/google_button.dart';
 import 'package:petcare/app/shared/theme_utils.dart';
 import 'package:petcare/app/modules/login/buttons/facebook_button.dart';
 
@@ -9,13 +10,15 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-            margin: EdgeInsets.only(top: ScreenUtil.statusBarHeight + 30),
+            margin: EdgeInsets.all(12.0),
             width: double.infinity,
             child: Column(
               children: <Widget>[
-                Image.asset('lib/assets/images/logo.jpeg',
-                    width: ScreenUtil().setWidth(400), fit: BoxFit.fill),
-
+                Padding(padding: const EdgeInsets.only(top: 50.0),
+                  child: Image.asset('lib/assets/images/logo.jpeg',
+                    width: ScreenUtil().setWidth(500), fit: BoxFit.fill), 
+                ),
+                
                 //Formulario
                 Form(
                     child: Column(
@@ -39,10 +42,15 @@ class LoginPage extends StatelessWidget {
                               borderRadius: BorderRadius.circular(50),
                               gapPadding: 0)),
                     ),
+
+                    SizedBox(
+                      height: 10,
+                    ),
+
                     Container(
                         width: double.infinity,
                         padding: EdgeInsets.all(10),
-                        height: 60,
+                        height: 75,
                         child: RaisedButton(
                           onPressed: () {},
                           shape: RoundedRectangleBorder(
@@ -77,15 +85,33 @@ class LoginPage extends StatelessWidget {
                         ],
                       ),
                     ),
-                    FacebookButton(
-                      onTap: () => (null),
+
+                    Container(
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          FacebookButton(
+                            onTap: () => (null),
+                          ),
+                          SizedBox(
+                            width: 40,
+                          ),
+                          GoogleButton(
+                            onTap: () => (null),
+                          ),
+                        ],
+                      ),
                     ),
+                    
                     Divider(),
                     FlatButton(onPressed: () => {}, child: Text('Cadastre-se'))
                   ],
                 ))
               ],
-            )));
+            )
+        )
+    );
   }
 }
 

@@ -2,11 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 
-class FacebookButton extends StatelessWidget {
+class GoogleButton extends StatelessWidget {
 
   final GestureTapCallback onTap;
   
-  const FacebookButton({
+  const GoogleButton({
     Key key,
     this.onTap,
   }) : super(key: key);
@@ -26,7 +26,7 @@ class FacebookButton extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 2, right: 2),
               child: Icon(
-                FontAwesome.facebook,
+                FontAwesome.google,
                 color: Colors.white,
                 size: 25,
               ),
