@@ -31,7 +31,7 @@ dependencies:
   # # Rest com Refresh Token
   # dio: ^3.0.9
   # flutter_secure_storage: ^3.3.3
-  shared_preferences: ^0.5.7+3
+  # shared_preferences: ^0.5.7+3
   # connectivity: ^0.4.9
 
   # #Profile
@@ -80,9 +80,6 @@ dependencies:
   
   # # Push Notification
   # flutter_local_notifications: ^1.4.4+2
-
-  # HTTP requests
-  http: 0.12.2
 
 dev_dependencies:
   flutter_test:

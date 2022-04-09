@@ -4,14 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:petcare/app/modules/login/buttons/google_button.dart';
 import 'package:petcare/app/shared/theme_utils.dart';
 import 'package:petcare/app/modules/login/buttons/facebook_button.dart';
-import 'package:petcare/services/api_manager.dart';
 
-class LoginPage extends StatefulWidget {
-  @override
-  _LoginPageState createState() => _LoginPageState();
-}
-
-class _LoginPageState extends State<LoginPage> {
+class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,15 +14,14 @@ class _LoginPageState extends State<LoginPage> {
             width: double.infinity,
             child: Column(
               children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.only(top: 50.0),
+                Padding(padding: const EdgeInsets.only(top: 50.0),
                   child: Image.asset('lib/assets/images/logo.jpeg',
-                      width: ScreenUtil().setWidth(500), fit: BoxFit.fill),
+                    width: ScreenUtil().setWidth(500), fit: BoxFit.fill), 
                 ),
-
+                
                 //Formulario
                 Form(
-                    child: Column(
+                  child: Column(
                   children: <Widget>[
                     TextFormField(
                       decoration: InputDecoration(
@@ -38,12 +31,12 @@ class _LoginPageState extends State<LoginPage> {
                               borderRadius: BorderRadius.circular(50),
                               gapPadding: 0)),
                       validator: (String value) {
-                        if (value.isEmpty) {
-                          return 'Login obrigatório';
-                        }
+                      if (value.isEmpty) {
+                        return 'Login obrigatório';
+                      }
 
-                        return null;
-                      },
+                      return null;
+                    },
                     ),
                     SizedBox(
                       height: 20,
@@ -62,20 +55,17 @@ class _LoginPageState extends State<LoginPage> {
                         return null;
                       },
                     ),
+
                     SizedBox(
                       height: 10,
                     ),
+
                     Container(
                         width: double.infinity,
                         padding: EdgeInsets.all(10),
                         height: 75,
                         child: RaisedButton(
-                          onPressed: () {
-                            // TODO: Giovanna, adicionar estado para email e password
-                            APIManager().authenticate(
-                                email: 'menezesmarina@icloud.com',
-                                password: '12345678');
-                          },
+                          onPressed: () {},
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20)),
                           color: ThemeUtils.primaryColor,
@@ -108,6 +98,7 @@ class _LoginPageState extends State<LoginPage> {
                         ],
                       ),
                     ),
+
                     Container(
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
@@ -125,11 +116,14 @@ class _LoginPageState extends State<LoginPage> {
                         ],
                       ),
                     ),
+                    
                     Divider(),
-                    FlatButton(onPressed: () => {}, child: Text('Cadastre-se'))
+                      FlatButton(onPressed: () => {}, child: Text('Cadastre-se'))
                   ],
                 ))
               ],
-            )));
+            )
+        )
+    );
   }
 }
