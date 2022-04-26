@@ -7,8 +7,8 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-// import 'package:google_maps_flutter/google_maps_flutter.dart';
-// import 'package:google_maps_webservice/places.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:google_maps_webservice/places.dart';
 
 class AddressConfirmPage extends StatefulWidget {
   final PlaceDetails address;
@@ -20,7 +20,7 @@ class AddressConfirmPage extends StatefulWidget {
 
 class _AddressConfirmPageState extends ModularState<AddressConfirmPage, AddressConfirmController> {
   // var controller = Modular.get<AddressConfirmController>();
-  //final Completer<GoogleMapController> _mapsController = Completer();
+  final Completer<GoogleMapController> _mapsController = Completer();
 
   @override
   void initState() {
@@ -64,8 +64,29 @@ class _AddressConfirmPageState extends ModularState<AddressConfirmPage, AddressC
             Observer(builder: (_) {
               return Expanded(
                 child: controller.addressModel != null
-                ///////
-                Container(),
+                    ? GoogleMap(
+                        mapType: MapType.normal,
+                        markers: {
+                          Marker(
+                            markerId: MarkerId(controller.addressModel.id.toString()),
+                            position: LatLng(controller.addressModel.latitude, controller.addressModel.longitude),
+                            infoWindow: InfoWindow(
+                              title: controller.addressModel.address,
+                            ),
+                            onTap: () {},
+                          ),
+                        },
+                        initialCameraPosition: CameraPosition(
+                          target: LatLng(controller.addressModel.latitude, controller.addressModel.longitude),
+                          zoom: 16,
+                        ),
+                        myLocationButtonEnabled: false,
+                        myLocationEnabled: false,
+                        onMapCreated: (GoogleMapController controller) {
+                          _mapsController.complete(controller);
+                        },
+                      )
+                    : Container(),
               );
             }),
             //AIzaSyApf37zicYFGFP8NzcehFxxDDQ9lkZymrM
