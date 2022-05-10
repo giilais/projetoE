@@ -1,6 +1,6 @@
-import 'package:cuidapet/app/models/fornecedor_model.dart';
-import 'package:cuidapet/app/models/fornecedor_servicos.dart';
-import 'package:cuidapet/app/utils/theme_utils.dart';
+import 'package:projetoE/app/models/fornecedor_model.dart';
+import 'package:projetoE/app/models/fornecedor_servicos.dart';
+import 'package:projetoE/app/utils/theme_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';

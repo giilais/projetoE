@@ -1,5 +1,5 @@
-import 'package:cuidapet/app/models/agendamento_model.dart';
-import 'package:cuidapet/app/repositories/agendamento_repository.dart';
+import 'package:projetoE/app/models/agendamento_model.dart';
+import 'package:projetoE/app/repositories/agendamento_repository.dart';
 import 'package:mobx/mobx.dart';
 
 part 'meus_agendamentos_controller.g.dart';

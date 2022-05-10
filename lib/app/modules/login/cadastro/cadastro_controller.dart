@@ -1,6 +1,6 @@
-import 'package:cuidapet/app/core/exceptions/cuidapet_exceptions.dart';
-import 'package:cuidapet/app/repositories/usuario_repository.dart';
-import 'package:cuidapet/app/shared/loader_component.dart';
+import 'package:projetoE/app/core/exceptions/projetoE_exceptions.dart';
+import 'package:projetoE/app/repositories/usuario_repository.dart';
+import 'package:projetoE/app/shared/loader_component.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';

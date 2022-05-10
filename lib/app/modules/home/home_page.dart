@@ -1,8 +1,8 @@
-import 'package:cuidapet/app/models/category_model.dart';
-import 'package:cuidapet/app/models/fornecedor_model.dart';
-import 'package:cuidapet/app/shared/cuidapet_appbar.dart';
-import 'package:cuidapet/app/shared/cuidapet_drawer.dart';
-import 'package:cuidapet/app/utils/theme_utils.dart';
+import 'package:projetoE/app/models/category_model.dart';
+import 'package:projetoE/app/models/fornecedor_model.dart';
+import 'package:projetoE/app/shared/projetoE_appbar.dart';
+import 'package:projetoE/app/shared/projetoE_drawer.dart';
+import 'package:projetoE/app/utils/theme_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -30,13 +30,13 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CuidapetAppbar(
+      appBar: projetoEAppbar(
         context,
         width: MediaQuery.of(context).size.width * .9,
         callback: () => controller.initPage(),
         onTextChange: (text) => controller.filtrarFornecedoresPorNome(text),
       ),
-      drawer: CuidapetDrawer(),
+      drawer: projetoEDrawer(),
       backgroundColor: Colors.grey[100],
       body: RefreshIndicator(
         onRefresh: () => controller.initPage(),

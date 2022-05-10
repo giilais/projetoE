@@ -1,4 +1,4 @@
-import 'package:cuidapet/app/database/connection.dart';
+import 'package:projetoE/app/database/connection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 

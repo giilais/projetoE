@@ -1,10 +1,10 @@
 import 'dart:io';
 
-import 'package:cuidapet/app/core/dio/custom_dio.dart';
-import 'package:cuidapet/app/core/exceptions/cuidapet_exceptions.dart';
-import 'package:cuidapet/app/models/access_service_model.dart';
-import 'package:cuidapet/app/models/usuario_model.dart';
-import 'package:cuidapet/app/repositories/shared_prefs_repository.dart';
+import 'package:projetoE/app/core/dio/custom_dio.dart';
+import 'package:projetoE/app/core/exceptions/projetoE_exceptions.dart';
+import 'package:projetoE/app/models/access_service_model.dart';
+import 'package:projetoE/app/models/usuario_model.dart';
+import 'package:projetoE/app/repositories/shared_prefs_repository.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class UsuarioRepository {

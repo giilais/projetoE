@@ -1,6 +1,6 @@
-import 'package:cuidapet/app/modules/splash/splash_controller.dart';
+import 'package:projetoE/app/modules/splash/splash_controller.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:cuidapet/app/modules/splash/splash_page.dart';
+import 'package:projetoE/app/modules/splash/splash_page.dart';
 
 class SplashModule extends ChildModule {
   @override

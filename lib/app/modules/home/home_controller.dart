@@ -1,13 +1,13 @@
-import 'package:cuidapet/app/models/address_model.dart';
-import 'package:cuidapet/app/models/fornecedor_model.dart';
-import 'package:cuidapet/app/repositories/fornecedor_repository.dart';
-import 'package:cuidapet/app/repositories/shared_prefs_repository.dart';
+import 'package:projetoE/app/models/address_model.dart';
+import 'package:projetoE/app/models/fornecedor_model.dart';
+import 'package:projetoE/app/repositories/fornecedor_repository.dart';
+import 'package:projetoE/app/repositories/shared_prefs_repository.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:mobx/mobx.dart';
 
-import 'package:cuidapet/app/models/category_model.dart';
-import 'package:cuidapet/app/repositories/addresses_repository.dart';
-import 'package:cuidapet/app/repositories/categories_repository.dart';
+import 'package:projetoE/app/models/category_model.dart';
+import 'package:projetoE/app/repositories/addresses_repository.dart';
+import 'package:projetoE/app/repositories/categories_repository.dart';
 
 part 'home_controller.g.dart';
 

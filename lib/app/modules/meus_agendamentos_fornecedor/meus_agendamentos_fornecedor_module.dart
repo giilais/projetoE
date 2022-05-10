@@ -1,6 +1,6 @@
-import 'package:cuidapet/app/modules/meus_agendamentos_fornecedor/meus_agendamentos_fornecedor_controller.dart';
+import 'package:projetoE/app/modules/meus_agendamentos_fornecedor/meus_agendamentos_fornecedor_controller.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:cuidapet/app/modules/meus_agendamentos_fornecedor/meus_agendamentos_fornecedor_page.dart';
+import 'package:projetoE/app/modules/meus_agendamentos_fornecedor/meus_agendamentos_fornecedor_page.dart';
 
 class MeusAgendamentosFornecedorModule extends ChildModule {
   @override

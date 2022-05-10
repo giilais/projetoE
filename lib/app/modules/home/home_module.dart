@@ -1,9 +1,9 @@
-import 'package:cuidapet/app/modules/home/home_controller.dart';
-import 'package:cuidapet/app/repositories/addresses_repository.dart';
-import 'package:cuidapet/app/repositories/categories_repository.dart';
-import 'package:cuidapet/app/repositories/fornecedor_repository.dart';
+import 'package:projetoE/app/modules/home/home_controller.dart';
+import 'package:projetoE/app/repositories/addresses_repository.dart';
+import 'package:projetoE/app/repositories/categories_repository.dart';
+import 'package:projetoE/app/repositories/fornecedor_repository.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:cuidapet/app/modules/home/home_page.dart';
+import 'package:projetoE/app/modules/home/home_page.dart';
 
 class HomeModule extends ChildModule {
   @override

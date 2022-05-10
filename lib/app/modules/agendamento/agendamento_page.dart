@@ -5,10 +5,10 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_screenutil/screenutil.dart';
 
-import 'package:cuidapet/app/models/fornecedor_model.dart';
-import 'package:cuidapet/app/models/fornecedor_servicos.dart';
-import 'package:cuidapet/app/shared/cuidapet_text_form_field.dart';
-import 'package:cuidapet/app/utils/theme_utils.dart';
+import 'package:projetoE/app/models/fornecedor_model.dart';
+import 'package:projetoE/app/models/fornecedor_servicos.dart';
+import 'package:projetoE/app/shared/projetoE_text_form_field.dart';
+import 'package:projetoE/app/utils/theme_utils.dart';
 import 'package:intl/intl.dart';
 
 import 'agendamento_controller.dart';
@@ -124,7 +124,7 @@ class _AgendamentoPageState extends ModularState<AgendamentoPage, AgendamentoCon
                     SizedBox(
                       height: 20,
                     ),
-                    CuidapetTextFormField(
+                    projetoETextFormField(
                       label: 'Seu Nome',
                       controller: controller.nomeController,
                       validator: (String value) {
@@ -137,7 +137,7 @@ class _AgendamentoPageState extends ModularState<AgendamentoPage, AgendamentoCon
                     SizedBox(
                       height: 20,
                     ),
-                    CuidapetTextFormField(
+                    projetoETextFormField(
                       label: 'Nome do PET',
                       controller: controller.nomePetController,
                       validator: (String value) {

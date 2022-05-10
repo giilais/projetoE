@@ -1,7 +1,7 @@
-import 'package:cuidapet/app/models/fornecedor_model.dart';
-import 'package:cuidapet/app/models/fornecedor_servicos.dart';
-import 'package:cuidapet/app/repositories/agendamento_repository.dart';
-import 'package:cuidapet/app/shared/loader_component.dart';
+import 'package:projetoE/app/models/fornecedor_model.dart';
+import 'package:projetoE/app/models/fornecedor_servicos.dart';
+import 'package:projetoE/app/repositories/agendamento_repository.dart';
+import 'package:projetoE/app/shared/loader_component.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:mobx/mobx.dart';

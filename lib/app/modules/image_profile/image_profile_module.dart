@@ -1,6 +1,6 @@
-import 'package:cuidapet/app/modules/image_profile/image_profile_controller.dart';
+import 'package:projetoE/app/modules/image_profile/image_profile_controller.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:cuidapet/app/modules/image_profile/image_profile_page.dart';
+import 'package:projetoE/app/modules/image_profile/image_profile_page.dart';
 
 class ImageProfileModule extends ChildModule {
   @override

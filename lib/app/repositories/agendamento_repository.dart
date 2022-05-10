@@ -1,7 +1,7 @@
-import 'package:cuidapet/app/core/dio/custom_dio.dart';
-import 'package:cuidapet/app/models/agendamento_model.dart';
-import 'package:cuidapet/app/models/fornecedor_model.dart';
-import 'package:cuidapet/app/models/fornecedor_servicos.dart';
+import 'package:projetoE/app/core/dio/custom_dio.dart';
+import 'package:projetoE/app/models/agendamento_model.dart';
+import 'package:projetoE/app/models/fornecedor_model.dart';
+import 'package:projetoE/app/models/fornecedor_servicos.dart';
 
 class AgendamentoRepository {
   void salvarAgendamento(DateTime dataAgendamento, FornecedorModel fornecedor, List<FornecedorServicos> servicos, String nome, String nomePet) {

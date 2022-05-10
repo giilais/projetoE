@@ -1,7 +1,7 @@
-import 'package:cuidapet/app/repositories/shared_prefs_repository.dart';
-import 'package:cuidapet/app/repositories/usuario_repository.dart';
-import 'package:cuidapet/app/shared/auth_store.dart';
-import 'package:cuidapet/app/utils/theme_utils.dart';
+import 'package:projetoE/app/repositories/shared_prefs_repository.dart';
+import 'package:projetoE/app/repositories/usuario_repository.dart';
+import 'package:projetoE/app/shared/auth_store.dart';
+import 'package:projetoE/app/utils/theme_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_modular/flutter_modular.dart';
