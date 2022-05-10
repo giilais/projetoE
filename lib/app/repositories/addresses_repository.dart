@@ -29,7 +29,7 @@ class AdressesRepository {
     ]);
   }
 
-  Future<List<Prediction>> findAddressByGooglePlaces(String address) async {
+  Future<List<Prediction>> findAddressByGooglePlaces(String address) async { //pegando a localização atual
     final places = GoogleMapsPlaces(apiKey: DotEnv().env['googleApiKey']);
     var response = await places.autocomplete(
       address,
@@ -39,7 +39,7 @@ class AdressesRepository {
     return response.predictions;
   }
 
-  Future<PlacesDetailsResponse> findGooglePlacesDetail(String placeId) async {
+  Future<PlacesDetailsResponse> findGooglePlacesDetail(String placeId) async { 
     final places = GoogleMapsPlaces(apiKey: DotEnv().env['googleApiKey']);
     return await places.getDetailsByPlaceId(placeId);
   }

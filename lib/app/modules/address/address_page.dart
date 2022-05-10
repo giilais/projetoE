@@ -96,7 +96,7 @@ class _AddressPageState extends ModularState<AddressPage, AddressController> {
                               )),
                         ),
                         suggestionsCallback: (pattern) async {
-                          return await controller.findAddressGoogle(pattern);
+                          return await controller.findAddressGoogle(pattern); //chama a funcao para buscar os endereços junto com o auto complete
                         },
                         itemBuilder: (context, Prediction suggestion) {
                           return ListTile(
